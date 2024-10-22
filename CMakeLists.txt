@@ -24,10 +24,16 @@ else()
 endif()
 
 
+# Add source files
 set(SOURCES
     src/main.cpp
 )
 
+# Create executable
 add_executable(Celeris ${SOURCES})
 
+# Link Boost libraries from the bundled path
 target_link_libraries(Celeris ${BOOST_LIBS})
+
+# If additional libraries are needed, specify them here
+# e.g., target_link_libraries(Celeris ${BOOST_LIBS} Boost::json)
